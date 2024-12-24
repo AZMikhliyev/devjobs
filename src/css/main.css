@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-family: "Kumbh Sans", serif;
+}
+
+input {
+  font-family: "Kumbh Sans", serif;
+}
+
+button {
+  font-family: "Kumbh Sans", serif;
+}
+
+a {
+  font-family: "Kumbh Sans", serif;
+}
+
+body {
+  background: #121721;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+button {
+  border-radius: 5px;
+  background: #5964E0;
+  padding: 16px 35.5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.84px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+button:hover {
+  transition: 0.3s;
+  background: #939BF4;
+}
+
+input {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper header {
+  width: 100%;
+  max-width: 1500px;
+  padding: 45px 0px 85px;
+  background-image: url(../assets/img/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wrapper header .container {
+  padding: 0px 24px;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper header .container .mode {
+  width: 100%;
+  max-width: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper header .container .mode #lightmode {
+  width: 20px;
+}
+.wrapper header .container .mode #darkmode {
+  width: 12px;
+}
+.wrapper header .container .mode .mode-btn {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: end;
+  background: #FFFFFF;
+  padding: 5px;
+  cursor: pointer;
+}
+.wrapper header .container .mode .mode-btn .circle {
+  background: #5964E0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.wrapper header .container .mode .mode-btn .circle:checked {
+  transition: 1s;
+  background: #939BF4;
+}
+.wrapper main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.wrapper main .search-container {
+  width: 100%;
+  transform: translateY(-40px);
+  padding: 0 0 40px;
+}
+.wrapper main .search-container .container {
+  display: flex;
+  background: #19202D;
+  border-radius: 6px;
+}
+.wrapper main .search-container .container .checkbox-container {
+  padding: 16px 16px 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.wrapper main .search-container .container .checkbox-container .check {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.wrapper main .search-container .container .checkbox-container .check label {
+  font-size: 20px;
+  color: #FFFFFF;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.84px;
+}
+.wrapper main .search-container .container .checkbox-container .check input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2352941176);
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+.wrapper main .search-container .container .checkbox-container .check input[type=checkbox]::before {
+  position: absolute;
+  content: "✓";
+  font-size: 20px;
+  line-height: 15px;
+  color: #FFFFFF;
+  transform: scale(0);
+  transition: 0.3s all ease-in-out;
+}
+.wrapper main .search-container .container .checkbox-container .check input[type=checkbox]:checked:before {
+  background: #5964E0;
+  transform: scale(1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.wrapper main .search-container .container .pin {
+  width: 100%;
+  max-width: 290px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-right: 1px solid #6E8098;
+  padding: 16px 0 16px 32px;
+}
+.wrapper main .search-container .container .pin .filtr {
+  display: none;
+}
+.wrapper main .search-container .container .search {
+  padding: 16px 0 16px 32px;
+  width: 100%;
+  max-width: 463px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-right: 1px solid #6E8098;
+}
+.wrapper main .search-container .container .search .search-mobile {
+  display: none;
+}
+.wrapper main .search-container .container .search input {
+  width: 100%;
+  max-width: 271px;
+}
+.wrapper main .main-container {
+  width: 100%;
+  padding: 40px 0;
+}
+.wrapper main .main-container .container {
+  width: 100%;
+  max-width: 1110px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+  grid-auto-rows: 253px;
+  gap: 65px 30px;
+}
+.wrapper main .main-container .container .card {
+  background: #19202D;
+  border-radius: 6px;
+  padding: 0px 32px 32px 32px;
+}
+.wrapper main .main-container .container .card img {
+  transform: translateY(-25px);
+}
+.wrapper main .main-container .container .card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-bottom: 44px;
+}
+.wrapper main .main-container .container .card .card-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.84px;
+  color: #6E8098;
+}
+.wrapper main .main-container .container .card .card-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.8px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.wrapper main .main-container .container .card .card-info h3:hover {
+  transition: 0.3s;
+  color: #6E8098;
+}
+.wrapper main .main-container .container .card .locate-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.36px;
+  color: #5964E0;
+}
+
+@media (width < 1100px) {
+  .wrapper main .search-container .container {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper main .search-container .container .search {
+    max-width: 222px;
+  }
+  .wrapper main .search-container .container .pin {
+    max-width: 213px;
+  }
+}
+@media (width < 785px) {
+  .wrapper main .search-container .container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    flex-direction: row-reverse;
+  }
+  .wrapper main .search-container .container .pin {
+    border-right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+    padding: 0 24px 0 0;
+  }
+  .wrapper main .search-container .container .checkbox-container {
+    display: none;
+  }
+  .wrapper main .search-container .container .search {
+    width: 50px;
+    padding: 0;
+    gap: 0;
+    position: relative;
+    border-right: 0;
+  }
+  .wrapper main .search-container .container .search .search-mobile {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 15px;
+  }
+  .wrapper main .search-container .container .search input {
+    display: none;
+  }
+  .wrapper main .search-container .container .search label {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    background: #5964E0;
+    position: relative;
+  }
+  .wrapper main .search-container .container .search label img {
+    position: absolute;
+    z-index: 2;
+  }
+  .wrapper main .search-container .container .pin {
+    max-width: 213px;
+  }
+  .wrapper main .search-container .container .pin .pin-img {
+    display: none;
+  }
+  .wrapper main .search-container .container .pin .filtr {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */

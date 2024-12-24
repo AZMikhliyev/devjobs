@@ -1,0 +1,277 @@
+@import "../../src/style/reset";
+@import "./variables";
+@import "../../src/assets/fonts/fonts";
+
+body {
+  background: $body-bg;
+}
+
+.container {
+  width: 100%;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+button {
+  border-radius: 5px;
+  background: #ffffff3a;
+  padding: 16px 21px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.84px;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+    background: $button-hover;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  header {
+    width: 100%;
+    max-width: 1500px;
+    padding: 45px 0px 85px;
+    background-image: url(../../src/assets/img/header-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .container {
+      padding: 0px 24px;
+      width: 100%;
+      max-width: 1110px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .mode {
+        width: 100%;
+        max-width: 112px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #lightmode {
+          width: 20px;
+        }
+        #darkmode {
+          width: 12px;
+        }
+        .mode-btn {
+          width: 48px;
+          height: 24px;
+          border-radius: 12px;
+          display: flex;
+          justify-content: end;
+          background: $white;
+          padding: 5px;
+          cursor: pointer;
+          .circle {
+            background: $mode-circle;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            &:checked {
+              transition: 1s;
+              background: $button-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    width: 100%;
+    // padding-bottom: 32px;
+    .scoot-content {
+      width: 100%;
+      transform: translateY(-41px);
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $search-bg;
+        padding-right: 43px;
+        border-radius: 6px;
+        .scoot-site-link {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          img {
+            border-top-left-radius: 6px;
+          }
+          .mobile {
+            display: none;
+          }
+          h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29.77px;
+            color: $white;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.84px;
+            color: $search-border;
+          }
+        }
+      }
+    }
+    .scoot-info {
+      border-radius: 6px;
+      padding-bottom: 53px;
+      .container {
+        width: 100%;
+        max-width: 730px;
+        background: $search-bg;
+        padding: 48px;
+        .head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 20px;
+          .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            p {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 19.84px;
+              color: $search-border;
+            }
+            h3 {
+              font-size: 28px;
+              font-weight: 700;
+              line-height: 34.73px;
+              color: $white;
+            }
+            .locate-link {
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 17.36px;
+              color: $mode-circle;
+            }
+          }
+          button {
+            background: $mode-circle;
+            &:hover {
+              transition: 0.3s;
+              background: $button-hover;
+            }
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          color: $paragraph;
+          padding: 20px 0;
+        }
+        h2 {
+          padding: 20px 0;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.8px;
+          color: $white;
+        }
+        .list-contain {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding-bottom: 28px;
+          .item {
+            display: flex;
+            gap: 32px;
+            p {
+              padding: 0;
+            }
+            h4 {
+              color: $mode-circle;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      background: $search-bg;
+      .container {
+        width: 100%;
+        max-width: 730px;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 39px;
+        .footer-content {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24.8px;
+            color: $white;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.84px;
+            color: $search-border;
+          }
+        }
+        button{
+          background: $mode-circle;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 450px) {
+  .wrapper {
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .scoot-info {
+        max-width: 327px;
+        display: flex;
+        justify-content: center;
+        .container {
+          padding: 40px 24px;
+          margin: 0 auto;
+          .scoot-site-link {
+            .mobile {
+              display: block;
+            }
+            .desktop {
+              display: none;
+            }
+          }
+        }
+      }
+      .scoot-content {
+        padding-top: -15px;
+        .container {
+          max-width: 327px;
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          padding-bottom: 32px;
+          .scoot-site-link {
+            transform: translateY(-25px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}
